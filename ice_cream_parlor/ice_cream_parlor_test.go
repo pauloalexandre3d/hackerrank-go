@@ -6,7 +6,7 @@ import (
 )
 
 func TestIceCreamParlor(t *testing.T) {
-	menu := []int{2, 7, 13, 5, 4, 13, 5}
+	menu := []int{2, 7, 13, 5, 4, 13, 3}
 	money := 10
 
 	indices := getIndices(menu, money)
