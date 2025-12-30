@@ -7,12 +7,20 @@ import (
 )
 
 func TestPairSum(t *testing.T) {
-	input := []int{-5, -2, 3, 4, 6}
-	target := 7
+	tc := []struct {
+		in     []int
+		target int
+		want   []int
+	}{
+		{[]int{-5, -2, 3, 4, 6}, 7, []int{2, 3}},
+		{[]int{1, 2, 3, 4, 6}, 6, []int{1, 3}},
+		{[]int{2, 5, 9, 11}, 11, []int{0, 2}},
+	}
 
-	result := pairSumSorted(input, target)
-
-	assert.Equal(t, []int{2, 3}, result)
+	for _, c := range tc {
+		got := pairSumSorted(c.in, c.target)
+		assert.Equal(t, c.want, got)
+	}
 }
 
 func pairSumSorted(input []int, target int) interface{} {
