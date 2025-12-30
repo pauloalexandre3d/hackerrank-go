@@ -19,14 +19,14 @@ func TestIsPalindromeValid(t *testing.T) {
 		{"racecar", true},
 	}
 	for _, c := range tcs {
-		got := testIsPalindromeValid(c.input)
+		got := isPalindromeValid(c.input)
 		if !assert.Equal(t, c.want, got) {
 			t.Errorf("input: %s, got %v, want %v", c.input, got, c.want)
 		}
 	}
 }
 
-func testIsPalindromeValid(input string) bool {
+func isPalindromeValid(input string) bool {
 	left, right := 0, len(input)-1
 	for left < right {
 		for left < right && !unicode.IsLetter(rune(input[left])) && !unicode.IsDigit(rune(input[left])) {
