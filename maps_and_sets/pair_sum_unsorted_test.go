@@ -23,12 +23,12 @@ func TestPairSumUnsorted(t *testing.T) {
 }
 
 func pairSumUnsorted(in []int, target int) []int {
-	hm := make(map[int]int)
+	m := make(map[int]int)
 	for i, x := range in {
-		if _, exists := hm[target-x]; exists {
-			return []int{hm[target-x], i}
+		if _, exists := m[target-x]; exists {
+			return []int{m[target-x], i}
 		}
-		hm[x] = i
+		m[x] = i
 	}
 	return []int{}
 }
