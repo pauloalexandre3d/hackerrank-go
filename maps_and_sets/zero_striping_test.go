@@ -5,6 +5,7 @@ import (
 	"testing"
 )
 
+// TestZeroStriping O(m x n)
 func TestZeroStriping(t *testing.T) {
 	matrix := [][]int{
 		{1, 2, 3, 4, 5},
