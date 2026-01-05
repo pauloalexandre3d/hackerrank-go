@@ -10,12 +10,13 @@ import (
 	"testing"
 )
 
-//Given the test scores of 10 students in Physics and History,
-//compute Karl Pearson’s coefficient of correlation between these scores.
-//Round the result to three decimal places.
+// Given the test scores of 10 students in Physics and History,
+// compute Karl Pearson’s coefficient of correlation between these scores.
+// Round the result to three decimal places.
+// Using Pearson's formula: r = (n∑XY - ∑X∑Y) / √[(n∑X² - (∑X)²)(n∑Y² - (∑Y)²)]
 func TestCoefficientOfCorrelation(t *testing.T) {
 	//Enter your code here. Read input from STDIN. Print output to STDOUT
-	//reader := bufio.NewReaderSize(os.Stdin, 16 * 1024 * 1024)
+	//reader := bufio.NewReaderSize(os.Stdin, 1024)
 	//
 	//physicsScores, err := readInts(reader)
 	//if err != nil {
